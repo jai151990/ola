@@ -8,4 +8,4 @@ do
   echo "siva$i container created"
   echo "========================================="
 done
-docker inspect -f '{{.NetworkSettings.Networks.bridge.IPAddress}}' `docker ps -q` > ip.txt
+docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} `docker ps -q` > ip.txt
