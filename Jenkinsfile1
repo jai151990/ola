@@ -11,7 +11,7 @@ pipeline {
                 sh 'mvn install'
             }
                       }
-        stage('build') {
+        stage('Dockerfile true') {
             steps {
                 sh 'docker build -t="jaisriram111/mypip-img" .'
                 sh 'creat-docenv.sh'
