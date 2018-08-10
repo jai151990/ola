@@ -12,15 +12,11 @@ pipeline {
             }
                       }
             }  
-    agent { dockerfile true }
-    stages {
         stage('build') {
             steps {
                 sh 'docker build -t="jaisriram111/mypip-img" .'
                 sh 'creat-docenv.sh'
             }
         }
-    }
-        
    }
 
