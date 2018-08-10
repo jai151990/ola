@@ -11,7 +11,6 @@ pipeline {
                 sh 'mvn install'
             }
                       }
-            }  
         stage('build') {
             steps {
                 sh 'docker build -t="jaisriram111/mypip-img" .'
@@ -19,4 +18,4 @@ pipeline {
             }
         }
    }
-
+ }
