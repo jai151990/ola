@@ -10,18 +10,17 @@ pipeline {
             steps {
                 sh 'mvn install'
             }
-        }
-        stage('Dockerfile') {
+                      }
+            }  
+    agent { dockerfile true }
+    stages {
+        stage('build') {
             steps {
-                sh 'Docker build -t="jaisriram111/mypipe-img" .'
+                sh 'docker build -t="jaisriram111/mypip-img" .'
+                sh 'creat-docenv.sh'
             }
         }
-        stage('cretaeEnv') {
-            steps {
-                sh 'creat-docenv.sh 4'
-            }
-        }
-
     }
-}
+        
+   }
 
