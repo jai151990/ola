@@ -19,7 +19,7 @@ pipeline {
 
         stage('Setting the variables values') {
             steps {
-                sh "creat-docenv.sh"
+                sh "./creat-docenv.sh"
             }
         }
   }
