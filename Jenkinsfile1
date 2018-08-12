@@ -17,9 +17,9 @@ pipeline {
             }
         }
 
-        stage('Dockerfile true') {
+        stage('creat-docenv.sh true') {
             steps{
-		sh `creat-docenv.sh 4`
+		sh 'creat-docenv.sh'
 	    }
 	}
   }
