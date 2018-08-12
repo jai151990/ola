@@ -14,8 +14,13 @@ pipeline {
         stage('Dockerfile true') {
             steps {
                 sh 'docker build -t="jaisriram111/mypip-img" .'
-                sh './creat-docenv.sh 4'
             }
         }
-   }
+
+        stage('Dockerfile true') {
+            steps{
+		sh `creat-docenv.sh 4`
+	    }
+	}
+  }
  }
